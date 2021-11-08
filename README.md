@@ -1,3 +1,4 @@
+
 # Scope and Closure Challenge
 
 The module challenge is the afternoon project or assignment that students work through independently. This expands on the guided project completed earlier with the instructor.
@@ -52,6 +53,7 @@ Open a second terminal inside of your project by clicking on the split terminal 
 Inside of your second terminal type `npm start` 
 ![alt text](assets/npm_start.png "type npm start")
 
+
 You will be running your tests in one terminal and debugging in the other. As you work on your code you should make use of `console.log` to check your progress and debug.
 ![alt text](assets/tests_debug_terminal_final.png "your terminal should look like this")
 
@@ -60,7 +62,10 @@ You will be running your tests in one terminal and debugging in the other. As yo
 
 Edit the `ReadMe` file with your answers to the questions below.
 
-1. In your own words, define closure (1-2 sentences).
+1. In your own words, define closure (1-2 sentences). 
+
+  Closure refers an inner function that is created to be used later
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -82,6 +87,9 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+Closure refers to when an inner function takes and uses a  value defined in the outer function. It refers to code that is created in order to be used later.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
 c. What is the lexical scope of `newRoll`? 
 
