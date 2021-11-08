@@ -64,7 +64,7 @@ Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences). 
 
-  Closure refers an inner function that is created to be used later
+Closure refers to when an inner function takes and uses a value defined in the outer function. It refers to code that is created in order to be used later.
 
 2. Study the following code, then answer the questions below.
 
@@ -74,6 +74,7 @@ function personalDice(name){
       // generate random number between 1 and 6
     const newRoll = Math.floor(Math.random() * 6);
     console.log(`${name} rolled a ${newRoll}`)
+    debugger;
   }
 }
 
@@ -88,11 +89,17 @@ dansRoll();
 
 a. Where is closure used in this code? How can you tell?
 
-Closure refers to when an inner function takes and uses a  value defined in the outer function. It refers to code that is created in order to be used later.
+The closure in this code is name, because it is called in the return function, which then has to search outwards to the parent function in order to receive the value.
 
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+what is always the same is "dan rolled a". what always changes is the randomly generated number. The other thing that can change is the name. 
+
 c. What is the lexical scope of `newRoll`? 
 
+the lexical scope of newRole
+
+the lexical scope of new role is the return function in which it is created.
 
 ### Task 3 - Stretch Goals
 
