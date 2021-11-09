@@ -18,7 +18,7 @@ function processFirstItem(stringList, callback) {
   return callback(stringList[0])
 
 }
-console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
+//           
 
 // ⭐️ Example Challenge END ⭐️
 
@@ -160,32 +160,32 @@ Use the scoreboard function below to do the following:
 ]  
   */
 
-function scoreboard(getInningScorecb, inningcb) {
+function scoreboard(getInningScoreCB, inningCB, numInnings) {
 
 let allInnings = [];
+let awayScore = 0;
+let homeScore = 0;
 
-for (let i = 0; i < 10; i++) {
- let inningScore =  getInningScorecb(inningcb)
- allInnings.push(inningScore);
-}
+for (let i = 0; i < numInnings; i++) {
+  let inningScore = getInningScoreCB(inningCB);
 
-return allInnings
-}
+  homeScore = homeScore + inningScore.Home
+  awayScore = awayScore + inningScore.Away
+  allInnings.push(`Inning: ${i + 1} Away ${inningScore.Away} - Home ${inningScore.Home}`); 
+  }
 
-console.log(scoreboard(getInningScore, inning))
-
-// const totalScore = [];
-//   let homeScore = 0;
-//   let awayScore = 0;
+  if (homeScore === awayScore){
+    allInnings.push(`This game will require extra innings: Home: ${homeScore} Away: ${awayScore}`)
+    } else if(homeScore < awayScore || homeScore >awayScore){
+      allInnings.push(`Final Score: Away ${awayScore} - Home ${homeScore}`)
+    }
+  return allInnings;
+  }
   
-//   for(let i = 0; i < 2; i++) {
-//     let currentScore = gamecb(scorecb);
-//     homeScore = homeScore + currentScore.home;
-//     awayScore= awayScore + currentScore.away;
-//     totalScore.push(`Period${i + 1} Away ${awayScore} - Home ${homeScore}`);
-//   }
-//   return totalScore
-// }
+
+console.log(scoreboard(getInningScore, inning, 9))
+
+
 
 
 
